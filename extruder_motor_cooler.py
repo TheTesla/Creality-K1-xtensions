@@ -21,13 +21,13 @@ def f(x,y,z):
         return False
     if ((abs(x)-22)**2+y**2)**0.5 < 1.6:
         return False
-    if z > 2 and z < 10:
+    if z > 1 and z < 10:
         rp = (x**2+(abs(y)-22)**2)**0.5
         if rp < 1.5:
             return False
-        if rp < 2.0:
+        if rp < 3.0:
             return True
-    if z > 3:
+    if z > 1.5:
         return False
 
     r = (x**2 + y**2)**0.5
@@ -38,7 +38,7 @@ def f(x,y,z):
         return False
 
     if r < 16  + 7.5*((math.cos(ang*2+math.pi)+1)/2)**20 and r > 11 \
-    and z > 1 and z < 2:
+    and z > 0.5 and z < 1:
         return False
 
     return True
